@@ -9,22 +9,27 @@ public class Peuple {
         this.pays = new Homme[100];
         this.nbHommes = 0;
     }
+
+    public Homme[] getpays() {
+        return pays;
+    }
+
+    public void setpays(Homme[] pays) {
+        this.pays = pays;
+    }
+
+    public int getNbHommes() {
+        return nbHommes;
+    }
+
+    public void setNbHommes(int nbHommes) {
+        this.nbHommes = nbHommes;
+    }
              
     public void naissance(Homme h) {
             if(!this.estPresent(h)) {
             this.pays[this.nbHommes] = h;
             this.nbHommes++;
-        }
-    }
-            
-    public void mort(Homme h) {
-        if(this.estPresent(h)) {
-            for(int i = 0; i < this.nbHommes; i++) {
-                if(this.pays[i] == h) {
-                    this.pays[i] = this.pays[this.nbHommes-1];
-                    this.nbHommes--;
-                }
-            }
         }
     }
              
