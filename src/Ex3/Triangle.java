@@ -6,10 +6,10 @@ public class Triangle implements Drawable, Moveable {
     private Segment s3;
     private Integer color;
 
-    public Triangle(Point p1, Point p2, Point p3, Integer color) {
-        this.s1 = new Segment(p1, p2, color);
-        this.s2 = new Segment(p2, p3, color);
-        this.s3 = new Segment(p3, p1, color);
+    public Triangle(Segment s1, Segment s2, Segment s3, Integer color) {
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
         this.color = color;
     }
 
@@ -56,8 +56,6 @@ public class Triangle implements Drawable, Moveable {
 
     @Override
     public void draw() {
-        s1.draw();
-        s2.draw();
-        s3.draw();             
+        System.out.println("Drawing triangle " + s1.getP1().toString() + " " + s1.getP2().toString() + " " + s2.getP2().toString() + " " + s3.getP1().toString() + " with color " + color);
     }
 }

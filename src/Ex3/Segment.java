@@ -36,10 +36,6 @@ public class Segment implements Drawable, Moveable {
     public void setP2(Point p2) {
         this.p2 = p2;
     }
-    
-    public double length() {
-        return p1.distance(p2);
-    }
 
     @Override
     public void translate(Integer tx, Integer ty) {
@@ -49,7 +45,6 @@ public class Segment implements Drawable, Moveable {
     
     @Override
     public void draw() {
-        System.out.println("Drawing segment " + p1.distance(p2));
+        System.out.println("Drawing segment " + p1.toString() + " " + p2.toString() + " with color " + color);
     }
-
 }

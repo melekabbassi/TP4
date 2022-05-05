@@ -30,10 +30,6 @@ public class Point implements Moveable {
         this.y = y;
     }
     
-    public double distance(Point p) {
-        return Math.sqrt(Math.pow(p.getX() - x, 2) + Math.pow(p.getY() - y, 2));
-    }
-    
     public String toString() {
         return "(" + getX() + ", " + getY() + ")";
     }
